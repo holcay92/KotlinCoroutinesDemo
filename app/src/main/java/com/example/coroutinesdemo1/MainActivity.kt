@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             textView.text = count++.toString()
         }
         downloadButton.setOnClickListener {
+            // this is an interface that is used to run the code in the background
             CoroutineScope(Dispatchers.IO).launch {
                 downloadUserData()
             }
